@@ -1,65 +1,59 @@
-public class Main {
+// Para practicar la encapsulación:
+class Main {
     public static void main(String[] args) {
-        // Ejercicio 1
-        int numero = -3;
-        if (numero > 0) {
-            System.out.println("Es Positivo");
-        } else {
-            System.out.println("Es Negativo");
-        };
-        System.out.println("----");
-        // Ejercicio 2
-
-        int contador = 3;
-        while (numero < contador) {
-            System.out.println(numero);
-            numero++;
-        };
-        // Ejercicio 3
-
-        int num = 2;
-        int cont1 = 3;
-
-        do {
-            System.out.println("----");
-            System.out.println(num);
-            num++;
-        } while (num > cont1);
-
-        System.out.println("----");
-
-        // Ejercicio 4
-        int numeroFor = 0;
-        for(int i = 0; i <= 3; i++){
-            numeroFor += 1;
-            System.out.println(numeroFor);
-
-        };
-        System.out.println("---");
+        System.out.println("Hello world!");
+        // Crear un objeto persona en el main.
+        Persona cristian = new Persona();
+        // Utiliza los gets y sets para darle valores a las propiedades edad, nombre
+        cristian.setEdad(27);
+        cristian.setNombre("Cristian");
+        cristian.setTelefono(32345445);
+        // telefono, por último muéstralas por consola.
+        System.out.println(cristian.getEdad());
+        System.out.println(cristian.getNombre());
+        System.out.println(cristian.getTelefono());
 
 
-
-        // Ejercicio 5
-
-        String estacion = "verano";
-
-        switch(estacion){
-
-            case "primavera":
-                System.out.println("Estamos en Primavera");
-                break;
-            case "verano":
-                System.out.println("Estamos en Verano");
-                break;
-            case "otoño" :
-                System.out.println("Estamos en Otoño");
-                break;
-            case "invierno":
-                System.out.println("Estamos en Invierno");
-                break;
-            default:
-                System.out.println("no existe " + estacion);
-        };
     }
+}
+//  Crear clase Persona.
+class Persona{
+    // Crear variables las privadas edad, nombre y telefono
+    private int Edad;
+    private String Nombre;
+    private int Telefono;
+
+
+
+    // Crear gets y sets de cada propiedad.
+
+    public void setEdad(int Edad){
+        this.Edad = Edad;
+    }
+
+    public int getEdad(){
+        return Edad;
+    }
+
+
+    public void setNombre(String Nombre){
+        this.Nombre = Nombre;
+
+    }
+
+    public String getNombre(){
+        return Nombre;
+    }
+
+    public void setTelefono(int Telefono){
+        this.Telefono = Telefono;
+
+    }
+    public int getTelefono(){
+        return Telefono;
+    }
+
+
+
 
 }
