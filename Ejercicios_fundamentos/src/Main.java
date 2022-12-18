@@ -1,58 +1,120 @@
-// Para practicar la encapsulación:
+//Herencia Y  encapsulamiento
 class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        // Crear un objeto persona en el main.
-        Persona cristian = new Persona();
-        // Utiliza los gets y sets para darle valores a las propiedades edad, nombre
-        cristian.setEdad(27);
-        cristian.setNombre("Cristian");
-        cristian.setTelefono(32345445);
-        // telefono, por último muéstralas por consola.
-        System.out.println(cristian.getEdad());
-        System.out.println(cristian.getNombre());
-        System.out.println(cristian.getTelefono());
 
-
+        // Crea  objeto de la clase Cliente que debe tener como propiedades la edad, el telefono, el nombre y el credito
+        Cliente fulanito = new Cliente();
+// tienes que darles valor
+        fulanito.setEdad(30);
+        fulanito.setNombre("Franco");
+        fulanito.setTelefono(9458432);
+        fulanito.setCredito(500);
+        //  mostrarlas por pantalla.
+        System.out.println(" Cliente ");
+        System.out.println("  Nombre: " +fulanito.getNombre());
+        System.out.println("  Edad: "+ fulanito.getEdad());
+        System.out.println("  Nro. de Tel: "+fulanito.getTelefono());
+        System.out.println("  Credito: $"+fulanito.getCredito());
+        System.out.println("---------");
+        // Crea  objeto de la clase Trabajador que debe tener como propiedades la edad, el telefono, el nombre y el Salario
+        Trabajador tutano = new Trabajador();
+// tienes que darles valor
+        tutano.setEdad(40);
+        tutano.setNombre("Jose");
+        tutano.setTelefono(345646);
+        tutano.setSalario(1000);
+// mostrarlas por pantalla
+        System.out.println(" Trabajador: ");
+        System.out.println("  Nombre: "+tutano.getNombre());
+        System.out.println("  Edad: "+tutano.getEdad());
+        System.out.println("  Nro. de Tel: "+tutano.getTelefono());
+        System.out.println("  Salario: $"+tutano.getSalario());
+        System.out.println("");
+        System.out.println("    --FIN--");
     }
 }
-//  Crear clase Persona.
-class Persona{
-    // Crear variables las privadas edad, nombre y telefono
+//  Crea una clase Persona con las siguientes variables: La edad,El nombre,El teléfono
+
+class Persona {
+    // propiedades
     private int edad;
     private String nombre;
     private int telefono;
+    // constructor
+    public Persona (){
+        System.out.println("");
+        System.out.println("Estoy en el constructor De Persona");
+        System.out.println("");
 
+    }
+    // funcion setter y getter
 
-
-    // Crear gets y sets de cada propiedad.
-// el nombre de la funcion getter y setter debe ser con get y primera letra con Mayuscula de la propiedad  ej edad setEdad(){}
     public void setEdad(int edad){
         this.edad = edad;
     }
-
     public int getEdad(){
-        return edad;
+        return this.edad;
     }
-
-
     public void setNombre(String nombre){
         this.nombre = nombre;
-
     }
-
     public String getNombre(){
-        return nombre;
+        return this.nombre;
     }
-
     public void setTelefono(int telefono){
         this.telefono = telefono;
-
     }
     public int getTelefono(){
-        return telefono;
+        return this.telefono;
     }
 
+}
+// crea una nueva clase Cliente que herede de Persona que tendra propiedad credito solo para esta clase
+
+class Cliente extends Persona{
+    // propiedades de la clase
+
+    private int credito;
+    // constructor
+
+    public Cliente(){
+        System.out.println("Estas en el constructor de Cliente");
+        System.out.println("");
+
+
+    }
+    // funciones setter y getter
+
+    public void setCredito(int credito){
+        this.credito = credito;
+    }
+    public int getCredito(){
+        return this.credito;
+    }
+
+}
+// crea una clase Trabajador que herede de Persona, y con una variable salario solo para esta clase
+
+class Trabajador extends Persona {
+    // propiedades de la clase
+
+    private int salario;
+    // constructor
+
+    public Trabajador(){
+        System.out.println("Estas en el constructor de Trabajador");
+        System.out.println("");
+    }
+
+    // funciones getter y setter
+    public void setSalario(int salario){
+        this.salario = salario;
+
+    }
+    public int getSalario(){
+        return this.salario;
+
+    }
 
 
 
