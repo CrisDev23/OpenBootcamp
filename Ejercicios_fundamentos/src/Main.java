@@ -19,38 +19,38 @@ class Main {
 //  Crear clase Persona.
 class Persona{
     // Crear variables las privadas edad, nombre y telefono
-    private int Edad;
-    private String Nombre;
-    private int Telefono;
+    private int edad;
+    private String nombre;
+    private int telefono;
 
 
 
     // Crear gets y sets de cada propiedad.
-
-    public void setEdad(int Edad){
-        this.Edad = Edad;
+// el nombre de la funcion getter y setter debe ser con get y primera letra con Mayuscula de la propiedad  ej edad setEdad(){}
+    public void setEdad(int edad){
+        this.edad = edad;
     }
 
     public int getEdad(){
-        return Edad;
+        return edad;
     }
 
 
-    public void setNombre(String Nombre){
-        this.Nombre = Nombre;
+    public void setNombre(String nombre){
+        this.nombre = nombre;
 
     }
 
     public String getNombre(){
-        return Nombre;
+        return nombre;
     }
 
-    public void setTelefono(int Telefono){
-        this.Telefono = Telefono;
+    public void setTelefono(int telefono){
+        this.telefono = telefono;
 
     }
     public int getTelefono(){
-        return Telefono;
+        return telefono;
     }
 
 
